@@ -1,0 +1,13 @@
+.sectors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 100px 10px;
+}
+// @media screen and (max-width: 576px) {
+//     .sectors {
+//         gap: 20px;
+//     }
+// }

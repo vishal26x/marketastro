@@ -1,0 +1,151 @@
+.home {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  align-self: flex-start;
+}
+.nifty {
+  width: 100%;
+  // padding: 0 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.global {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.nifty > :nth-child(1),
+.nifty > :nth-child(2) {
+  background-color: #03314b;
+
+  .index-short-name,
+  .index-price,
+  .price {
+    color: #ffffff;
+  }
+  .index-full-name,
+  .day-high-price,
+  .day-low-price {
+    color: #ccc;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nifty > :nth-child(1),
+  .nifty > :nth-child(2) {
+    min-width: 280px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .nifty > :nth-child(1),
+  .nifty > :nth-child(2) {
+    min-width: 300px;
+  }
+  .nifty {
+    justify-content: space-around;
+  }
+  
+ 
+}
+
+@media only screen and (min-width: 1200px) {
+  .nifty > :nth-child(1),
+  .nifty > :nth-child(2) {
+    min-width: 380px;
+  }
+ 
+}
+
+
+@media only screen and (min-width: 1400px) {
+  .nifty > :nth-child(1),
+  .nifty > :nth-child(2) {
+    min-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+ 
+  .global {
+    // grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .global {
+    // grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+
+  .global {
+    gap: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .home {
+    margin-top: 20px;
+  }
+  
+  .nifty > :nth-child(1),
+  .nifty > :nth-child(2) {
+    min-width: 280px;
+  }
+ 
+  .global {
+    // grid-template-columns: 1fr 1fr;
+    margin-bottom: 65px;
+    padding: 15px 0;
+  }
+  
+}
+@media only screen and (max-width: 576px) {
+ .nifty > :nth-child(1),
+.nifty > :nth-child(2){
+  width: 100%;
+}
+  .nifty {
+    flex-direction: column;
+  }
+  .nifty > :nth-child(2) {
+    margin-top: 15px;
+  }
+
+  .global {
+    // grid-template-columns: 1fr;
+    gap: 15px;
+   
+  }
+  
+}
+
+@media only screen and (max-width: 420px) {
+  .nifty {
+    flex-direction: column;
+  }
+  .nifty > :nth-child(2) {
+    margin-top: 10px;
+  }
+  
+  .global {
+    // grid-template-columns: 1fr;
+    gap: 10px;
+    
+  }
+  
+}

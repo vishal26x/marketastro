@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, useLocation } from "react-router-dom";
+import { Navbar, Footer, Header } from "./components";
+import { Home, Sectors, About, News, Error, SectorStocks } from "./pages";
+import "./App.scss";
+import { useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 
-function App() {
+const App = () => {
+  // fake authentication Promise
+  const authenticate = () => {
+    return new Promise((resolve) => setTimeout(resolve, 2000)); // 2 seconds
+  };
+  useEffect(() => {
+    authenticate().then(() => {
+      const ele = document.getElementById("loading-screen");
+      if (ele) {
+        //fade out
+        ele.classList.add("available");
+        setTimeout(() => {
+          // remove from DOM
+          ele.outerHTML = "";
+        }, 2000);
+      }
+    });
+  }, []);
+
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Navbar />
+      <div className="main">
+        <AnimatePresence exitBeforeEnter>
+          <Routes key={location.pathname} location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/sectors" element={<Sectors />} />
+            <Route path="/sectors/:sectorId" element={<SectorStocks />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/*" element={<Error />} />
+          </Routes>
+        </AnimatePresence>
+      </div>
+      {/* <Footer /> */}
+    </>
   );
-}
+};
 
 export default App;
