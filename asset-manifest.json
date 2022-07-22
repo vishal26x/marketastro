@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/marketastro/static/css/main.e7f24362.css",
+    "main.js": "/marketastro/static/js/main.8ba112a2.js",
+    "index.html": "/marketastro/index.html",
+    "main.e7f24362.css.map": "/marketastro/static/css/main.e7f24362.css.map",
+    "main.8ba112a2.js.map": "/marketastro/static/js/main.8ba112a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7f24362.css",
+    "static/js/main.8ba112a2.js"
+  ]
+}
