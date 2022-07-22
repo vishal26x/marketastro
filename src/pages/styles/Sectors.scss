@@ -1,13 +1,29 @@
 .sectors {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 100px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 0;
+  gap: 50px;
 }
-// @media screen and (max-width: 576px) {
-//     .sectors {
-//         gap: 20px;
-//     }
-// }
+
+.sectors-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #03314b;
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .sectors {
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sectors {
+    gap: 30px;
+  }
+}

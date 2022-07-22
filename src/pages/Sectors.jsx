@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 const Sectors = () => {
   const niftyParams = sectors.map((i) => i.parameter).toString();
   const [sectorData, setSectorData] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     getNiftyData(niftyParams).then((data) => {
       data &&
@@ -25,7 +25,7 @@ const Sectors = () => {
           ? sectors
           : JSON.parse(sessionStorage.getItem("localStoredSectors"))
       );
-      setIsLoading(data ? false : true);
+      //setIsLoading(data ? false : true);
     });
   }, [niftyParams]);
   console.log(sectorData);
@@ -33,6 +33,7 @@ const Sectors = () => {
   return (
     <>
       <PageTransition>
+        <h1 className="sectors-heading">// NIFTY Sectors //</h1>
         <div className="sectors">
           {sectors.map((sector, index) => {
             return (

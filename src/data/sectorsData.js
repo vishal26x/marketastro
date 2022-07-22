@@ -1,6 +1,6 @@
 export const sectors = [
   {
-    name: "TOP 50",
+    name: "NIFTY 50",
     fName: "Top 50 Companies",
     parameter: "NIFTY 50",
     pChange: 1,

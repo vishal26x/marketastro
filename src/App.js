@@ -5,6 +5,7 @@ import "./App.scss";
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 
+
 const App = () => {
   // fake authentication Promise
   const authenticate = () => {
@@ -31,16 +32,16 @@ const App = () => {
       <Header />
       <Navbar />
       <div className="main">
-        <AnimatePresence exitBeforeEnter>
-          <Routes key={location.pathname} location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/sectors" element={<Sectors />} />
-            <Route path="/sectors/:sectorId" element={<SectorStocks />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/*" element={<Error />} />
-          </Routes>
-        </AnimatePresence>
+          <AnimatePresence exitBeforeEnter>
+            <Routes key={location.pathname} location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path="/sectors" element={<Sectors />} />
+              <Route path="/sectors/:sectorId" element={<SectorStocks />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/*" element={<Error />} />
+            </Routes>
+          </AnimatePresence>
       </div>
       {/* <Footer /> */}
     </>

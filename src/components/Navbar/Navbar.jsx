@@ -6,6 +6,7 @@ import {
   HiOutlineSpeakerphone,
   HiOutlineInformationCircle,
 } from "react-icons/hi";
+import {MdOutlineInsights} from 'react-icons/md'
 import "./Navbar.scss";
 
 export const Navbar = () => {
@@ -13,7 +14,12 @@ export const Navbar = () => {
     <>
       <div className="navbar-container">
         <Link className="nav-logo" to="/">
-          <img className="nav-logo-icon" src="/assets/logo.png" alt="" srcSet="" />
+          <img
+            className="nav-logo-icon"
+            src="/assets/logo.png"
+            alt=""
+            srcSet=""
+          />
           <span className="nav-logo-text">MarketAstro</span>
         </Link>
         <motion.nav
@@ -25,8 +31,8 @@ export const Navbar = () => {
           <ul className="nav-menu">
             <li className="nav-menu-item">
               <NavLink activeclassname="active" to="/">
-                <HiOutlineHome className="nav-menu-icon" />{" "}
-                <span className="nav-menu-text">Market</span>
+                <MdOutlineInsights className="nav-menu-icon" />{" "}
+                <span className="nav-menu-text">Overview</span>
               </NavLink>
             </li>
             <li className="nav-menu-item">
